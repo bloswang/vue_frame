@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home clearfix">
     <top_menu></top_menu>
     <left_menu class="left_menu"></left_menu>
     <div class="content">
@@ -24,15 +24,15 @@ export default {
 
 <style scoped>
   .left_menu{
-    margin-top: 0.5%;
     float: left;
-    overflow: hidden;
+    overflow: auto;
     width: 20%;
   }
   .content{
-    padding: 20px;
-    margin: 0.5%;
-    float: left;
-    width: 79%;
+    padding: 20px 20px 20px 20px;
+    float: right;
+    overflow: auto;
+    width: 80%;
+    height: calc(100% - 60px);
   }
-  </style>
+</style>

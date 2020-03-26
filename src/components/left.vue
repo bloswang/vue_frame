@@ -1,7 +1,7 @@
 <template>
     <div class="left">
       <el-row class="tac">
-        <el-col :span="24" style="height:700px;">
+        <el-col :span="24" class="tac">
           <el-menu
             :default-active="active"
             class="el-menu-vertical-demo"
@@ -18,7 +18,7 @@
               </template>
               <el-menu-item-group>
                 <router-link to="/home/one">
-                <el-menu-item index="1-1">选项1</el-menu-item>
+                  <el-menu-item index="1-1">选项1</el-menu-item>
                 </router-link>
                 <router-link to="/home/two">
                   <el-menu-item index="1-2">选项2</el-menu-item>
@@ -27,7 +27,7 @@
                   <el-menu-item index="1-3">选项3</el-menu-item>
                 </router-link>
                 <router-link to="/home/four">
-                <el-menu-item index="1-4">选项4</el-menu-item>
+                  <el-menu-item index="1-4">选项4</el-menu-item>
                 </router-link>
               </el-menu-item-group>
             </el-submenu>
@@ -77,9 +77,7 @@
         }
       },
       mounted(){
-
         let msg = sessionStorage.getItem("active")
-        console.log(msg)
         if(msg == null){
           this.active = '1-1'
         }else{
@@ -91,7 +89,10 @@
 
 <style>
   .left{
-    height:800px;
+    height: calc(100% - 60px);
+  }
+  .tac{
+    height: 100%;
   }
   .el-menu-vertical-demo{
     height:100%;

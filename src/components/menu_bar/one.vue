@@ -58,8 +58,8 @@
       },
       methods: {
         cardChange(val){
-          this.activeNames = []
-          this.activeNames.push(val+'')
+          /*this.activeNames = []
+          this.activeNames.push(val+'')*/
         },
         handleChange(val) {
           console.log(val);
@@ -67,12 +67,12 @@
       },
       created() {
         let vm = this
-        vm.$axios.request("post", "oneCard/consumingBehavior", function (data) {
+        vm.$axios.request("get", "../../../static/data.json", function (data) {
+          console.log(data)
 
         }, function (err) {
           console.log(err);
         })
-        console.log(this.$axios.request)
       }
     }
 </script>

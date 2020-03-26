@@ -11,11 +11,11 @@
 <style>
 .top{
   padding-left: 30px;
-  height: 50px;
+  height: 60px;
   background: #333;
 }
 .top p{
   color: #fff;
-  line-height: 50px;
+  line-height: 60px;
 }
 </style>
